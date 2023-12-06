@@ -1,0 +1,31 @@
+cabal-version: 2.4
+
+name: aoc2023
+version: 0.1.0.0
+
+author: Kyle Mayes
+maintainer: kyle@mayeses.com
+
+library
+    hs-source-dirs: library
+    exposed-modules:
+        Solution
+
+    build-depends:
+        base ^>=4.17.2.0,
+        text ^>=2.1
+    
+    default-language: Haskell2010
+
+executable main
+    hs-source-dirs: .
+    main-is: Main.hs
+    other-modules:
+        Day1
+
+    build-depends:
+        base ^>=4.17.2.0,
+        text ^>=2.1,
+        aoc2023
+
+    default-language: Haskell2010
