@@ -16,6 +16,10 @@ library
         text ^>=2.1
     
     default-language: Haskell2010
+    default-extensions:
+        FlexibleInstances,
+        OverloadedStrings,
+        RankNTypes
 
 executable main
     hs-source-dirs: .
@@ -29,3 +33,7 @@ executable main
         aoc2023
 
     default-language: Haskell2010
+    default-extensions:
+        FlexibleInstances,
+        OverloadedStrings,
+        RankNTypes

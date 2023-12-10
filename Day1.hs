@@ -1,5 +1,3 @@
-{-# LANGUAGE OverloadedStrings #-}
-
 module Day1 (day1) where
 
 import Data.Char (digitToInt, isDigit)
