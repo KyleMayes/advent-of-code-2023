@@ -21,7 +21,7 @@ type Parser a = T.Text -> a
 
 type Solver a b = a -> b
 
-type Solution a b = (Parser a, Solver a b, Solver a b)
+type Solution a b c = (Parser a, Solver a b, Solver a c)
 
 class Display a where
   display :: a -> String
@@ -35,7 +35,7 @@ instance Display String where
 instance Display T.Text where
   display = T.unpack
 
-executeSolution :: forall a b. (Display b) => Solution a b -> Input -> IO ()
+executeSolution :: forall a b c. (Display b, Display c) => Solution a b c -> Input -> IO ()
 executeSolution (parse, part1, part2) input = do
   input <- parse <$> loadInput input
   putStrLn $ concat $ replicate 40 "─"
