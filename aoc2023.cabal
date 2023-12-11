@@ -13,13 +13,15 @@ library
 
     build-depends:
         base ^>=4.17.2.0,
+        containers ^>= 0.6.6,
         text ^>=2.1
     
     default-language: Haskell2010
     default-extensions:
         FlexibleInstances,
         OverloadedStrings,
-        RankNTypes
+        RankNTypes,
+        TupleSections
 
 executable main
     hs-source-dirs: .
@@ -53,6 +55,7 @@ executable main
 
     build-depends:
         base ^>=4.17.2.0,
+        containers ^>= 0.6.6,
         text ^>=2.1,
         aoc2023
 
@@ -60,4 +63,5 @@ executable main
     default-extensions:
         FlexibleInstances,
         OverloadedStrings,
-        RankNTypes
+        RankNTypes,
+        TupleSections

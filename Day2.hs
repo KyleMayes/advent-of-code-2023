@@ -52,5 +52,4 @@ power (_, samples) =
 part2 :: Input -> Int
 part2 = sum . map power
 
-day2 :: (T.Text -> Input, Input -> Int, Input -> Int)
 day2 = (parse, part1, part2)
